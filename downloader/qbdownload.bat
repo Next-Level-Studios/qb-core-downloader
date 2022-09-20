@@ -61,6 +61,7 @@ set /P "dlpath=Enter path: "
 if not exist "%dlpath%" mkdir %dlpath%
 
 if %ERRORLEVEL% neq 0 goto errorscreen
+set CURRENTDIR=%dlpath%
 goto begindownload
 
 :errorscreen
@@ -87,6 +88,7 @@ timeout 5 > NUL
 goto downloadfiles
 
 :downloadfiles
+
 git clone -b main https://github.com/qbcore-framework/qb-radio ./resources/[voice]/qb-radio
 git clone -b main https://github.com/qbcore-framework/qb-core ./resources/[qb]/qb-core
 git clone -b main https://github.com/qbcore-framework/qb-scoreboard ./resources/[qb]/qb-scoreboard
@@ -96,6 +98,11 @@ git clone -b main https://github.com/qbcore-framework/qb-target ./resources/[qb]
 git clone -b main https://github.com/qbcore-framework/qb-customs ./resources/[qb]/qb-customs
 git clone -b main https://github.com/qbcore-framework/qb-vehiclesales ./resources/[qb]/qb-vehiclesales
 git clone -b main https://github.com/qbcore-framework/qb-vehicleshop ./resources/[qb]/qb-vehicleshop
+
+echo [1m Cooling down (we dont want to spam github)...[0m
+timeout 5 > NUL
+
+
 git clone -b main https://github.com/qbcore-framework/qb-houserobbery ./resources/[qb]/qb-houserobbery
 git clone -b main https://github.com/qbcore-framework/qb-prison ./resources/[qb]/qb-prison
 git clone -b main https://github.com/qbcore-framework/qb-atms ./resources/[qb]/qb-atms
@@ -105,13 +112,15 @@ git clone -b main https://github.com/qbcore-framework/qb-weed ./resources/[qb]/q
 git clone -b main https://github.com/qbcore-framework/qb-lapraces ./resources/[qb]/qb-lapraces
 git clone -b main https://github.com/qbcore-framework/qb-inventory ./resources/[qb]/qb-inventory
 git clone -b main https://github.com/qbcore-framework/qb-houses ./resources/[qb]/qb-houses
-echo [1m Cooling down (we dont want to spam github)...[0m
-timeout 5 > NUL
 git clone -b main https://github.com/qbcore-framework/qb-garages ./resources/[qb]/qb-garages
 git clone -b main https://github.com/qbcore-framework/qb-ambulancejob ./resources/[qb]/qb-ambulancejob
 git clone -b main https://github.com/qbcore-framework/qb-vehiclefailure ./resources/[qb]/qb-vehiclefailure
 git clone -b main https://github.com/qbcore-framework/qb-radialmenu ./resources/[qb]/qb-radialmenu
 git clone -b main https://github.com/qbcore-framework/qb-crypto ./resources/[qb]/qb-crypto
+
+echo [1m Cooling down again (we dont want to spam github)...[0m
+timeout 5 > NUL
+
 git clone -b main https://github.com/qbcore-framework/qb-weathersync ./resources/[qb]/qb-weathersync
 git clone -b main https://github.com/qbcore-framework/qb-policejob ./resources/[qb]/qb-policejob
 git clone -b main https://github.com/qbcore-framework/qb-traphouse ./resources/[qb]/qb-traphouse
@@ -124,10 +133,11 @@ git clone -b main https://github.com/qbcore-framework/qb-weapons ./resources/[qb
 git clone -b main https://github.com/qbcore-framework/qb-scrapyard ./resources/[qb]/qb-scrapyard
 git clone -b main https://github.com/qbcore-framework/qb-tunerchip ./resources/[qb]/qb-tunerchip
 git clone -b main https://github.com/qbcore-framework/qb-towjob ./resources/[qb]/qb-towjob
-echo [1m Cooling down again (we dont want to spam github)...[0m
-timeout 5 > NUL
 git clone -b main https://github.com/qbcore-framework/qb-streetraces ./resources/[qb]/qb-streetraces
 git clone -b main https://github.com/qbcore-framework/qb-storerobbery ./resources/[qb]/qb-storerobbery
+
+echo [1m Cooling down again (we dont want to spam github)...[0m
+timeout 5 > NUL
 git clone -b main https://github.com/qbcore-framework/qb-spawn ./resources/[qb]/qb-spawn
 git clone -b main https://github.com/qbcore-framework/qb-skillbar ./resources/[qb]/qb-skillbar
 git clone -b main https://github.com/qbcore-framework/qb-smallresources ./resources/[qb]/qb-smallresources
@@ -139,8 +149,6 @@ git clone -b main https://github.com/qbcore-framework/qb-pawnshop ./resources/[q
 git clone -b main https://github.com/qbcore-framework/qb-taxijob ./resources/[qb]/qb-taxijob
 git clone -b main https://github.com/qbcore-framework/qb-busjob ./resources/[qb]/qb-busjob
 git clone -b main https://github.com/qbcore-framework/qb-newsjob ./resources/[qb]/qb-newsjob
-echo [1m Cooling down again (we dont want to spam github)...[0m
-timeout 5 > NUL
 git clone -b main https://github.com/qbcore-framework/qb-jewelery ./resources/[qb]/qb-jewelery
 git clone -b main https://github.com/qbcore-framework/qb-bankrobbery ./resources/[qb]/qb-bankrobbery
 git clone -b main https://github.com/qbcore-framework/qb-truckerjob ./resources/[qb]/qb-truckerjob
@@ -149,6 +157,10 @@ git clone -b main https://github.com/qbcore-framework/qb-fitbit ./resources/[qb]
 git clone -b main https://github.com/qbcore-framework/qb-commandbinding ./resources/[qb]/qb-commandbinding
 git clone -b main https://github.com/qbcore-framework/qb-banking ./resources/[qb]/qb-banking
 git clone -b main https://github.com/qbcore-framework/qb-clothing ./resources/[qb]/qb-clothing
+
+echo [1m Cooling down again (we dont want to spam github)...[0m
+timeout 5 > NUL
+
 git clone -b main https://github.com/qbcore-framework/qb-hotdogjob ./resources/[qb]/qb-hotdogjob
 git clone -b main https://github.com/qbcore-framework/qb-doorlock ./resources/[qb]/qb-doorlock
 git clone -b main https://github.com/qbcore-framework/qb-garbagejob ./resources/[qb]/qb-garbagejob
@@ -156,14 +168,11 @@ git clone -b main https://github.com/qbcore-framework/qb-drugs ./resources/[qb]/
 git clone -b main https://github.com/qbcore-framework/qb-shops ./resources/[qb]/qb-shops
 git clone -b main https://github.com/qbcore-framework/qb-lockpick ./resources/[qb]/qb-lockpick
 git clone -b main https://github.com/qbcore-framework/qb-interior ./resources/[qb]/qb-interior
-echo [1m Cooling down again (we dont want to spam github)...[0m
-timeout 5 > NUL
 git clone -b main https://github.com/qbcore-framework/qb-menu ./resources/[qb]/qb-menu
 git clone -b main https://github.com/qbcore-framework/qb-input ./resources/[qb]/qb-input
 git clone -b main https://github.com/qbcore-framework/qb-loading ./resources/[qb]/qb-loading
 
-
-@RD /S /Q "%CURRENTDIR%\[voice]\qb-radio\.git"
+@RD /S /Q "%CURRENTDIR%\resources\[voice]\qb-radio\.git"
 @RD /S /Q "%CURRENTDIR%\resources\[qb]\qb-core\.git"
 @RD /S /Q "%CURRENTDIR%\resources\[qb]\qb-scoreboard\.git"
 @RD /S /Q "%CURRENTDIR%\resources\[qb]\qb-adminmenu\.git"
@@ -229,7 +238,6 @@ git clone -b main https://github.com/qbcore-framework/qb-loading ./resources/[qb
 @RD /S /Q "%CURRENTDIR%\resources\[qb]\qb-menu\.git"
 @RD /S /Q "%CURRENTDIR%\resources\[qb]\qb-input\.git"
 @RD /S /Q "%CURRENTDIR%\resources\[qb]\qb-loading\.git"
-
 :end
 cls
 echo [102;97m Updating completed! [0m
